@@ -1,7 +1,7 @@
 {
-  "name": "vue-cli-plugin-apollo",
+  "name": "vue-cli-plugin-apollo-graphql-ws",
   "version": "0.22.2",
-  "description": "vue-cli 3 plugin to add Apollo and GraphQL",
+  "description": "vue-cli 3 plugin to add Apollo and GraphQL with Graphql-ws support",
   "main": "index.js",
   "types": "./types.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "build:client-addon": "cd ./client-addon && yarn build && cd ../",
     "prepublishOnly": "npm run test && npm run build",
     "test": "npm run test:eslint && cd ./client-addon npm run lint",
-    "test:eslint": "eslint --ext .js .",
+    "test:eslint": "eslint --ext .js .\\",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
@@ -55,12 +55,14 @@
     "graphql-subscriptions": "^1.1.0",
     "graphql-tag": "^2.10.3",
     "graphql-tools": "^6.0.9",
+    "graphql-ws": "4.9.0",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.4",
     "subscriptions-transport-ws": "^0.9.16",
     "ts-node": "^8.10.2"
   },
   "devDependencies": {
+    "@apollo/client": "^3.2.1",
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
